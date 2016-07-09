@@ -39,3 +39,4 @@ $ git rebase –continue
 Для второго коммита то же самое 
 
 В конце получаем: Successfully rebased and updated refs/heads/develop-feature3.
+2019
