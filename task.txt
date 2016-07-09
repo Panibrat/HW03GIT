@@ -16,3 +16,26 @@
 Например:
 $git log --oneline HEAD --no-merges
 вывод в одну строку (сообщения и сокращенного хеша) информации о коммитах из текущей ветки. за исключением коммитов слияния.
+
+
+git checkout  develop-feature3
+git rebase -i HEAD~2
+получаем в редакторе:
+
+pick 2b50960 not good commit
+pick c1aba12 one more not good commit
+
+В редакторе меняем pick на edit, сохраняем, закрываем.
+
+в консоле пишем 
+
+git commit –amend
+изменяем в редакторе коммит на 1951: now good(not good commit)
+, сохраняем, закрываем
+
+$ git rebase –continue
+
+
+Для второго коммита то же самое 
+
+В конце получаем: Successfully rebased and updated refs/heads/develop-feature3.
